@@ -7,12 +7,12 @@ import java.util.Scanner;
  *
  * @author Danny_Guancha
  */
-public class Principal {
+public class Usuario {
     public static void main (String [] args){
         Scanner consola = new Scanner(System.in);
         String ruta1 = "C:/Users/aguir/OneDrive/Documentos/NetBeansProjects/taller3Sw1/src/Archivos/Regalos.json";
         String ruta2 ="C:/Users/aguir/OneDrive/Documentos/NetBeansProjects/taller3Sw1/src/Archivos/Proveedor.json";
-        Principal pr = new Principal();
+        Usuario pr = new Usuario();
         System.out.println("Ingrese la edad.");
         int edad = consola.nextInt();
         System.out.println("Ingrese el valor que esta dispuesto a pagar.");
