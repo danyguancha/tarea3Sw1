@@ -18,6 +18,7 @@ import org.json.JSONObject;
  * @author Danny_Guancha
  */
 public class CargarDatos {
+    
 
     public List<Regalo> cargarRegalos(String ruta) throws ExceptionArchivo, FileNotFoundException, JSONException {
         File archivo = new File(ruta);
@@ -44,8 +45,8 @@ public class CargarDatos {
         }
 
     }
-
-    public List<Proveedor> cargarProveedores(String ruta) throws ExceptionArchivo, FileNotFoundException, JSONException {
+    
+      public List<Proveedor> cargarProveedores(String ruta) throws ExceptionArchivo, FileNotFoundException, JSONException {
         File archivo = new File(ruta);
         List<Proveedor> listaProveedores = new ArrayList<>();
         if (verificarRuta(ruta)) {
@@ -77,7 +78,8 @@ public class CargarDatos {
         } else {
             return false;
         }
-
     }
+    
+    
 
 }

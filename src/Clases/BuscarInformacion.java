@@ -13,21 +13,21 @@ import org.json.JSONException;
  * @author Danny_Guancha
  */
 public class BuscarInformacion {
-
-    private final CargarDatos cargaDatos;
+    private CargarDatos datos;
 
     public BuscarInformacion(){
-        this.cargaDatos= new CargarDatos();
+        this.datos = new CargarDatos();
     }
     
     public List<String> buscarInformacion(String rutaRegalos, String rutaProveedores, int edad, double valorPago) {
         List<String> listaDatos=new ArrayList<>();
         String salida;
         boolean encontrado =false;
+        
         try {
-
-            for (Proveedor p : cargaDatos.cargarProveedores(rutaProveedores)) {
-                for (Regalo r : cargaDatos.cargarRegalos(rutaRegalos)) {
+            for (Proveedor p : datos.cargarProveedores(rutaProveedores)) {
+                for (Regalo r : datos.cargarRegalos(rutaRegalos)) {
+                   
                     if(p.getNombre().equals(r.getProveedor()) && edad==r.getEdad() && r.getPrecio()<valorPago){
                         double precioTotal = calcularPrecioTotal(p.getPrecioEnvio(),r.getPrecio());
                         salida=r.getNombre().toString()+"- Precio base: $"+r.getPrecio()+
